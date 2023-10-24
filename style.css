@@ -1,32 +1,38 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
     min-height: 100vh;
-    
+    align-items: center;
+    justify-content: center;
 }
 
 main{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 .container{
-    align-items: center;
     text-align: center;
     padding: 30px;
+
 }
-.title{
-    padding: 30px 0;
-    font-family: 'Pacifico';
-    text-transform: capitalize;
-    font-size: 25px;
+
+.text{
+    color: white;
+    letter-spacing: 1px;
+    margin: 10px;
 }
 .page{
     width: 350px;
-    border: 1px solid #b6b6b6 ;
+    border: 1px solid #b6b6b6;
     padding-bottom: 15px;
+}
+
+.title{
+    padding: 30px 0;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: 'Pacifico';
 }
 
 form{
@@ -44,31 +50,34 @@ form input{
     border-radius: 4px;
     outline: none;
 }
+
 form input:focus{
     border: 1px solid rgba(0, 0, 0, 0.7);
-    background: #efefef;
+    background: #efefef ;
 }
+
 input[type="text"],
-input[type="password"]{
+input[type="password"] {
     padding-left: 10px;
     position: relative;
     height: 35px;
-    font-size: 15px;
+    font-size: 17PX;
 }
 
-input::placeholder{
+input::placeholder {
     font-weight: normal;
     font-size: 13px;
     transition: 0.3s ease;
 }
-input:focus::placeholder{
+input:focus::placeholder {
     position: relative;
     font-size: 10px;
     transform: translateY(-13px);
 }
-form button{
+
+form button {
     border: none;
-    background-color: #2cb4ff;
+    background-color: #008aff;
     padding: 9px 0;
     margin-top: 5px;
     color: white;
@@ -76,18 +85,23 @@ form button{
     font-weight: bold;
     text-transform: capitalize;
     letter-spacing: 1px;
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
 }
-
-
-form .option{
+form button:hover{
+    background-color: #2c58fe;
+}
+form button:active {
+    background: #2c58fe;
+    transform: scale(0.995);
+}
+ form .option {
     color: #5a5a5a;
     margin: 10px 0;
     font-weight: bold;
     position: relative;
-}
-form .option::before{
+ }
+ form .option::before {
     position: absolute;
     content: '';
     width: 37%;
@@ -96,8 +110,9 @@ form .option::before{
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-}
-form .option::after{
+    border-radius: 50px;
+ }
+ form .option::after {
     position: absolute;
     content: '';
     width: 37%;
@@ -106,97 +121,77 @@ form .option::after{
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.fblink {
+    border-radius: 50px;
+ }
+ .fblink {
     margin-top: 15px;
     width: 100%;
-    
-}
+ }
 
-.fblink span{
+ .fblink span {
     font-size: 18px;
-    color: #375189;
+    color: #021897;
     margin-right: 5px;
-}
-
-.fblink a{
-    text-decoration: none;
-    color: #0e1859;
-}
-.forget-id a{
-    text-decoration: none;
-    color: #0e1859;
-    font-size: 12px;
-
-}
-
-.forget-id{
-    margin-top: 15px;
-}
-
-.signup{
-    border: 1px solid #b6b6b6;
-    width: 307px;
-    padding: 21.5px;
-    margin-top: 10px;
-}
-
-.signup a{
+ }
+ .fblink a{
     text-decoration: none;
     font-weight: bold;
+    color: #021897;
+ }
+ .forget-id{
+    margin-top: 20px;
+ }
+ .forget-id a {
+    text-decoration: none;
+    color: #021897;
+    font-size: 12px;
+ }
+
+.signup{
+    padding: 23px;
+    width: 307px;
+    border: 1px solid #b6b6b6;
+    margin-top: 20px;   
+ }
+
+ .signup a {
+    
+    text-decoration: none;
+    margin-left: 5px;
     color: #008aff;
-    margin-left: 5px ;
-}
-
-p{
-    text-align: center;
-}
-.store-img{
+    font-weight: bold;
+ }
+ .store-img{
     width: 350px;
-    padding: 15Px;
-}
+    padding: 15px;
 
-.store-img img{
+ }
+ .store-img img {
     width: 28%;
     height: auto;
     cursor: pointer;
-}
-.store-img .playstore{
-    width: 7.4em;
-}
+ }
 
-@media screen and (max-width:768px) {
-    body{
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        
-    }
+ .store-img .playstore {
+    width: 7.4em;
+ }
+
+@media screen and (max-width:768px)  {
     main{
         display: block;
-        justify-content: center;
-        align-items: center;
+    }
+    .logo-img img{
+        display: none;
     }
     
-    .logo-img img{
-        display: none;
-    }
 }
-
-@media screen and (max-width:480px) {
-    body{
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        
-    }
+@media screen and (max-width:480-px)  {
     main{
         display: block;
-        justify-content: center;
-        align-items: center;
     }
     .logo-img img{
         display: none;
     }
+    
 }
+
